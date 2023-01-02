@@ -38,7 +38,7 @@ async function fund() {
       const txRespone = await contract.fund({
         value: ethers.utils.parseEther(ethamount),
       });
-      // wait for tx to finish
+      // wait for transaction  to be completed
       await listenTxmine(txRespone, provider);
       console.log("Done!");
     } catch (error) {
